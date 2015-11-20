@@ -33,7 +33,7 @@ script:
   # Run tests
   - python -c "import pyemma"
   - python -c "import pyemma.coordinates as coor"
-  - ipynbtest.py --show-diff --strict "test_pyemma.ipynb"
+  - ipynbtest.py --show-diff --strict "examples/ipython/test_pyemma.ipynb"
 #  - source devtools/ci/nosetests.sh
 #  - source devtools/ci/ipythontests.sh
 
