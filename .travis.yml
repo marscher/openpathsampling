@@ -1,3 +1,4 @@
+sudo: false
 language: python
 
 python:
@@ -31,6 +32,7 @@ script:
 
   # Run tests
   - python -c "import pyemma"
+  - python -c "import pyemma.coordinates as coor"
 #  - source devtools/ci/nosetests.sh
 #  - source devtools/ci/ipythontests.sh
 

@@ -33,7 +33,10 @@ conda install --yes `cat docs/requirements.txt | xargs`
 conda list -e
 
 # Install pandoc for markdown support
-sudo apt-get install pandoc
+wget https://github.com/jgm/pandoc/releases/download/1.15.2/pandoc-1.15.2-1-amd64.deb -O pandoc.deb
+dpkg -i --force-not-root --root=$HOME pandoc.deb
+export PATH=${PATH}:$HOME/bin
+pandoc --version
 
 (cd docs && make html && cd -)
 ls -lt docs/_build
